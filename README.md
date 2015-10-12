@@ -1,4 +1,4 @@
-SpreeProductOrderingInfo
+Spree Product Ordering Info
 ========================
 
 Introduction goes here.
