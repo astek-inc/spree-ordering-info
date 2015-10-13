@@ -9,7 +9,7 @@ Installation
 Add spree_ordering_info to your Gemfile:
 
 ```ruby
-gem 'spree_product_ordering_info'
+gem 'spree_ordering_info'
 ```
 
 Bundle your dependencies and run the installation generator:
