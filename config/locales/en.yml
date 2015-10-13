@@ -4,3 +4,7 @@
 en:
   spree:
     order_info: 'Ordering Information'
+    add_order_info: 'Add Ordering Information'
+    select: 'Select'
+    name: 'Name'
+    description: 'Description'
