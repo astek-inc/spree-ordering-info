@@ -3,4 +3,4 @@
 
 en:
   spree:
-    ordering_info: 'Ordering Information'
+    order_info: 'Ordering Information'

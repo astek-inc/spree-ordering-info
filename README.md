@@ -1,4 +1,4 @@
-Spree Product Ordering Info
+Spree Ordering Info
 ========================
 
 Introduction goes here.
@@ -6,7 +6,7 @@ Introduction goes here.
 Installation
 ------------
 
-Add spree_product_ordering_info to your Gemfile:
+Add spree_ordering_info to your Gemfile:
 
 ```ruby
 gem 'spree_product_ordering_info'
@@ -16,7 +16,7 @@ Bundle your dependencies and run the installation generator:
 
 ```shell
 bundle
-bundle exec rails g spree_product_ordering_info:install
+bundle exec rails g spree_ordering_info:install
 ```
 
 Testing
@@ -33,7 +33,7 @@ When testing your applications integration with this extension you may use it's 
 Simply add this require statement to your spec_helper:
 
 ```ruby
-require 'spree_product_ordering_info/factories'
+require 'spree_ordering_info/factories'
 ```
 
-Copyright (c) 2015 [name of extension creator], released under the New BSD License
+Copyright (c) 2015 Astek Wallcovering, Inc., released under the New BSD License
