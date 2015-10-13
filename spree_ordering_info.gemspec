@@ -3,8 +3,8 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_ordering_info'
   s.version     = '0.0.1'
-  s.summary     = 'Ordering info items applied to each product'
-  s.description = 'Ordering info items applied to each product'
+  s.summary     = 'Ordering information items attached to each product'
+  s.description = 'Ordering information items attached to each product'
   s.required_ruby_version = '>= 2.0.0'
 
   s.author    = 'Edwin Horneij'

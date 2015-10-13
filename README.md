@@ -1,5 +1,5 @@
 Spree Ordering Info
-========================
+===================
 
 Introduction goes here.
 
