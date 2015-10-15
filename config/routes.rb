@@ -3,7 +3,7 @@ Spree::Core::Engine.routes.draw do
 
   namespace :admin do
     resources :products do
-      resources :product_order_info_items
+      resources :product_order_info_items, only: [:index]
     end
   end
 end

@@ -8,3 +8,4 @@ en:
     select: 'Select'
     name: 'Name'
     description: 'Description'
+    reset_selection: 'Reset Selection'

@@ -1,45 +1,35 @@
 <%= render 'spree/admin/shared/product_tabs', current: :order_info %>
 <%= render 'spree/admin/shared/error_messages', target: @product %>
 
-<% # content_for :page_actions do %>
-    <% #= button_link_to(Spree.t(:add_order_info), "javascript:;", { icon: 'add', :'data-target' => "tbody#product_properties", class: 'btn-success spree_add_fields' }) %>
-<% #end if can? :create, Spree::OrderInfoItem %>
-
-<% # = debug @tmp %>
-<% # @order_info_items.each do |item| %>
-<% #= debug item %>
-<% # end %>
-
-<%= debug @product.order_info_items %>
-
 <div data-hook="admin_product_product_order_info_items" class="row">
+    <%= form_for @product, url: spree.admin_product_url(@product), method: :put do |f| %>
+        <fieldset>
+          <table class="table" data-hook>
+            <thead>
+                <tr data-hook="product_order_info_items_header">
+                  <th><%= Spree.t(:select) %></th>
+                  <th><%= Spree.t(:name) %></th>
+                  <th><%= Spree.t(:description) %></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @order_info_items.each do |item| %>
+                    <tr>
+                      <td><%= check_box_tag 'product[order_info_item_ids][]', item.id, @product_order_info_item_ids.include?(item.id), {:id => "product_order_info_item_ids_#{item.id}"} %></td>
+                      <td><%= item.name %></td>
+                      <td><%= item.description %></td>
+                    </tr>
+                <% end %>
+            </tbody>
+          </table>
 
-<%= form_for @product, url: spree.admin_product_product_order_info_items_url(@product), method: :put do |f| %>
-    <fieldset>
-      <!--<div id="prototypes" data-hook></div>-->
-
-      <table class="table" data-hook>
-        <thead>
-            <tr data-hook="product_order_info_items_header">
-              <th><%= Spree.t(:select) %></th>
-              <th><%= Spree.t(:name) %></th>
-              <th><%= Spree.t(:description) %></th>
-            </tr>
-        </thead>
-        <tbody>
-        <% @order_info_items.each do |item| %>
-        <tr>
-          <td><%= item.id %></td>
-          <td><%= item.name %></td>
-          <td><%= item.description %></td>
-        </tr>
-        <% end %>
-        </tbody>
-      </table>
-
-      <% #= render('spree/admin/shared/edit_resource_links') if can? :update, Spree::ProductOrderInfoItem %>
-
-    </fieldset>
-<% end %>
-
+          <div class="form-actions" data-hook="buttons">
+            <%= button Spree.t('actions.update'), 'refresh', 'submit', {class: 'btn-success'} %>
+            <span class="or"><%= Spree.t(:or) %></span>
+            <% icon = content_tag(:span, '', class: 'icon icon-delete') %>
+            <% text = icon + ' ' + Spree.t(:reset_selection) %>
+            <%= button_tag(text.html_safe, {type: 'reset', class: 'btn btn-default'}) %>
+          </div>
+        </fieldset>
+    <% end %>
 </div>
