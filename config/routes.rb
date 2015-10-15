@@ -5,5 +5,7 @@ Spree::Core::Engine.routes.draw do
     resources :products do
       resources :product_order_info_items, only: [:index]
     end
+
+    resources :order_info_items
   end
 end

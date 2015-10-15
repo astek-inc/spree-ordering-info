@@ -9,3 +9,7 @@ en:
     name: 'Name'
     description: 'Description'
     reset_selection: 'Reset Selection'
+    order_info_item: 'Ordering Information Item'
+    order_info_items: 'Ordering Information'
+    new_order_info_item: 'New Ordering Information Item'
+    editing_order_info_item: 'Editing Ordering Information Item'
