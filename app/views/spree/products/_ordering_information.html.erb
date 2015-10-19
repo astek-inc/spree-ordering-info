@@ -1,0 +1,8 @@
+<% unless @product.order_info_items.nil? %>
+    <h3><%= Spree.t(:order_info_items) %></h3>
+    <ul>
+      <% @product.order_info_items.each do |order_info_item| %>
+          <li><%= order_info_item.description.html_safe %></li>
+      <% end %>
+    </ul>
+<% end %>

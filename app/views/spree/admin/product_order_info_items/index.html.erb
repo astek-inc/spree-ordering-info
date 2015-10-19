@@ -17,7 +17,7 @@
                     <tr>
                       <td><%= check_box_tag 'product[order_info_item_ids][]', item.id, @product_order_info_item_ids.include?(item.id), {:id => "product_order_info_item_ids_#{item.id}"} %></td>
                       <td><%= item.name %></td>
-                      <td><%= item.description %></td>
+                      <td><%= item.description.html_safe %></td>
                     </tr>
                 <% end %>
             </tbody>
