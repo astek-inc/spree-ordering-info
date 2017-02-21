@@ -2,14 +2,14 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_ordering_info'
-  s.version     = '0.0.3'
+  s.version     = '0.0.4'
   s.summary     = 'Ordering information items attached to each product'
   s.description = 'Ordering information items attached to each product'
   s.required_ruby_version = '>= 2.0.0'
 
   s.author    = 'Edwin Horneij'
   s.email     = 'edwin@astekwallcovering.com'
-  # s.homepage  = 'http://www.spreecommerce.com'
+  s.homepage  = 'https://www.designyourwall.com'
 
   #s.files       = `git ls-files`.split("\n")
   #s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
