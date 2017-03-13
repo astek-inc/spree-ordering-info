@@ -7,17 +7,17 @@
 <% end %>
 
 <% if @order_info_items.any? %>
-    <table class="table" id='listing_properties' data-hook>
+    <table class="table" id='order_info_items' data-hook>
       <thead>
-      <tr data-hook="listing_properties_header">
-        <th><%= Spree.t(:name) %></th>
-        <th><%= Spree.t(:description) %></th>
+      <tr data-hook="order_info_items_header">
+        <th class="name"><%= Spree.t(:name) %></th>
+        <th class="description"><%= Spree.t(:description) %></th>
         <th class="actions"></th>
       </tr>
       </thead>
       <tbody>
       <% @order_info_items.each do |order_info_item| %>
-          <tr id="<%= spree_dom_id order_info_item %>" data-hook="listing_order_info_item_row">
+          <tr id="<%= spree_dom_id order_info_item %>" data-hook="order_info_items_row">
             <td><%= order_info_item.name %></td>
             <td><%= order_info_item.description %></td>
             <td class="actions actions-2 text-right">
@@ -34,5 +34,3 @@
       <%= link_to Spree.t(:add_one), new_object_url %>!
     </div>
 <% end %>
-
-<% #= paginate @collection %>
