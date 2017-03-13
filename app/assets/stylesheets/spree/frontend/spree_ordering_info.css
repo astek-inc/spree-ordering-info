@@ -1,0 +1,11 @@
+table#order_info_items thead th.name {
+    width: 360px;
+}
+
+table#order_info_items thead th.actions {
+    width: 120px;
+}
+
+table#order_info_items tbody td {
+    vertical-align: top;
+}

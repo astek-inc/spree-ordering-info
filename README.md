@@ -36,4 +36,4 @@ Simply add this require statement to your spec_helper:
 require 'spree_ordering_info/factories'
 ```
 
-Copyright (c) 2015 Astek Wallcovering, Inc., released under the New BSD License
+Copyright (c) 2017 Astek Wallcovering, Inc., released under the New BSD License
